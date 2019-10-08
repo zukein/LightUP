@@ -1,3 +1,19 @@
+<%- include('../../includes/head.ejs') %>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/javascripts/exposure.js"></script>
+<link rel="stylesheet" href="/stylesheets/exposure.css">
+</head>
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+  <main>
+      <%- include('../commonNav.ejs') %>
+    <div class="container">
+
+
+
+
+
 <h2 class="center">フォロー中</h2>
 <div class="center">
   <a class="button" href="/subscribers/new">新規登録</a>
@@ -34,3 +50,9 @@
     <% }); %>
   </tbody>
 </table>
+
+
+</div>
+</main>
+
+<%- include('../../includes//end.ejs') %>

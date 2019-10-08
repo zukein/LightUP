@@ -1,3 +1,18 @@
+<%- include('../../includes/head.ejs') %>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/javascripts/exposure.js"></script>
+<link rel="stylesheet" href="/stylesheets/exposure.css">
+</head>
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+  <main>
+      <%- include('../commonNav.ejs') %>
+    <div class="container">
+
+
+
+
 <div class="data-form">
   <form class="form-signin" action="<%=`/subscribers/${subscriber._id}/update?_method=PUT`%>" method="POST">
     <h2 class="form-signin-heading">編集画面</h2>
@@ -10,3 +25,11 @@
     <br /><button class="btn btn-lg btn-primary btn-block" type="submit">保存</button>
   </form>
 </div>
+
+
+</div>
+</main>
+
+<%- include('../../includes//end.ejs') %>
+
+

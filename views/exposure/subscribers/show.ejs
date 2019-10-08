@@ -1,3 +1,19 @@
+<%- include('../../includes/head.ejs') %>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/javascripts/exposure.js"></script>
+<link rel="stylesheet" href="/stylesheets/exposure.css">
+</head>
+
+<body>
+    <%- include('../../includes/navigation.ejs') %>
+  <main>
+      <%- include('../commonNav.ejs') %>
+    <div class="container">
+
+
+
+
+
 <h1 class="center">フォロー
   <%= subscriber.name %>
 </h1>
@@ -38,3 +54,9 @@
 <div>
   <a class="button" href="/subscribers">一覧</a>
 </div>
+
+
+</div>
+</main>
+
+<%- include('../../includes//end.ejs') %>

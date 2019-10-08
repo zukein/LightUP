@@ -22,11 +22,17 @@ module.exports = {
       });
   },
   indexView: (req, res) => {
-    res.render("exposure/subscribers/index");
+    res.render("exposure/subscribers/index", {
+      path: '/exposures',
+      pageTitle: 'Exposure Category '
+    });
   },
 
   new: (req, res) => {
-    res.render("exposure/subscribers/new");
+    res.render("exposure/subscribers/new", {
+      path: '/exposures',
+      pageTitle: 'Exposure Category '
+    });
   },
 
   create: (req, res, next) => {
@@ -62,7 +68,10 @@ module.exports = {
   },
 
   showView: (req, res) => {
-    res.render("exposure/subscribers/show");
+    res.render("exposure/subscribers/show", {
+      path: '/exposures',
+      pageTitle: 'Exposure Category '
+    });
   },
 
   edit: (req, res, next) => {
@@ -70,7 +79,9 @@ module.exports = {
     Subscriber.findById(subscriberId)
       .then(subscriber => {
         res.render("exposure/subscribers/edit", {
-          subscriber: subscriber
+          subscriber: subscriber,
+          path: '/exposures',
+          pageTitle: 'Exposure 編集'
         });
       })
       .catch(error => {

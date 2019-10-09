@@ -13,12 +13,12 @@
 
 
 
-
-<h2 class="center">フォロー中</h2>
+<br />
+<h2 class="center">自動操縦モードのUI test</h2>
 <div class="center">
   <a class="button" href="/subscribers/new">新規登録</a>
 </div>
-<table class="table">
+<!-- <table class="table">
   <thead>
     <tr>
       <th>名前</th>
@@ -49,115 +49,117 @@
     </tr>
     <% }); %>
   </tbody>
-</table>
+</table> -->
 
 
   <!-- Swiper -->
   <div class="swiper-container swiper1">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://haniwaman.com/wp-content/uploads/2018/05/swiper01.png" /><p>Slide 1</p></div>
-      <div class="swiper-slide"><img src="https://haniwaman.com/wp-content/uploads/2018/05/swiper02.png" /><p>Slide 1</p></div>
-      <div class="swiper-slide"><img src="https://haniwaman.com/wp-content/uploads/2018/05/swiper01.png" /><p>Slide 1</p></div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
+      <% subscribers.forEach(subscriber => { %>
+      <div class="swiper-slide"><img src="/images/exposure/c06.png" /><a class="trim-image-to-circle"></a><p><a href="<%= `/subscribers/${subscriber._id}` %>"></a><%= subscriber.name %><br />コメント コメント コメント</p><span><%= subscriber.email %></span>
+        <a href="<%=`subscribers/${subscriber._id}/edit`%>">✏️</a>
+        <!-- <a href="<%= `subscribers/${subscriber._id}/delete?_method=DELETE` %>" onclick="return confirm('削除していいですか？')" a>🗑</a> -->
+        <!-- <a>♡</a> -->
+      </div>
+      <% }); %>
     </div>
-    <!-- Add Pagination -->
     <div class="swiper-pagination swiper-pagination1"></div>
   </div>
 
   <!-- Swiper -->
   <div class="swiper-container swiper2">
     <div class="swiper-wrapper">
-      <% subscribers.forEach(subscriber => { %>
-      <div class="swiper-slide"><a href="<%= `/subscribers/${subscriber._id}` %>"><%= subscriber.name %></a></div>
-      <% }); %>
+      <div class="swiper-slide"><img src="/images/exposure/c06.png" /><a class="trim-image-to-circle"></a><p>スカイツリーの最上階に登る<br />最高の気分で飛び降りたくなった</p><span>by Tanaka Kazuhiro  40代  男性  自殺願望</span><a>♡</a></div>
+      <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>タイトル 2<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+      <div class="swiper-slide"><img src="/images/exposure/c04.png" /><a class="trim-image-to-circle"></a><p>タイトル 3<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+      <div class="swiper-slide"><img src="/images/exposure/c03.png" /><a class="trim-image-to-circle"></a><p>タイトル 4<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+      <div class="swiper-slide"><img src="/images/exposure/c02.png" /><a class="trim-image-to-circle"></a><p>タイトル 5<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+      <div class="swiper-slide"><img src="/images/exposure/c01.png" /><a class="trim-image-to-circle"></a><p>タイトル 6<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+      <div class="swiper-slide"><img src="/images/exposure/c03.png" /><a class="trim-image-to-circle"></a><p>タイトル 7<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+      <div class="swiper-slide"><img src="/images/exposure/c04.png" /><a class="trim-image-to-circle"></a><p>タイトル 8<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+      <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>タイトル 9<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+      <div class="swiper-slide"><img src="/images/exposure/c06.png" /><a class="trim-image-to-circle"></a><p>タイトル 10<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
     </div>
-    <!-- Add Pagination -->
     <div class="swiper-pagination swiper-pagination2"></div>
   </div>
 
   <!-- Swiper -->
   <div class="swiper-container swiper3">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
-    </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>スキップで歩いてみる<br />好きな歌をハミングしながら</p><span>BOT Recomend</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>タイトル 2<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c04.png" /><a class="trim-image-to-circle"></a><p>タイトル 3<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c03.png" /><a class="trim-image-to-circle"></a><p>タイトル 4<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c02.png" /><a class="trim-image-to-circle"></a><p>タイトル 5<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c01.png" /><a class="trim-image-to-circle"></a><p>タイトル 6<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c03.png" /><a class="trim-image-to-circle"></a><p>タイトル 7<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c04.png" /><a class="trim-image-to-circle"></a><p>タイトル 8<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>タイトル 9<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c06.png" /><a class="trim-image-to-circle"></a><p>タイトル 10<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+      </div>
     <div class="swiper-pagination swiper-pagination3"></div>
   </div>
 
   <div class="swiper-container swiper4">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>Jetson Nano で遊ぼう〜^^<br />大好きなことをやるのが才能になるよ！</p><span>by Professor Keiji Mitsubuchi</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>タイトル 2<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c04.png" /><a class="trim-image-to-circle"></a><p>タイトル 3<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c03.png" /><a class="trim-image-to-circle"></a><p>タイトル 4<br />コメント コメント コメント</p><span>○○代  ○性  うつ</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c02.png" /><a class="trim-image-to-circle"></a><p>タイトル 5<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c01.png" /><a class="trim-image-to-circle"></a><p>タイトル 6<br />コメント コメント コメント</p><span>○○代  ○性  うつ</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c03.png" /><a class="trim-image-to-circle"></a><p>タイトル 7<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c04.png" /><a class="trim-image-to-circle"></a><p>タイトル 8<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>タイトル 9<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c06.png" /><a class="trim-image-to-circle"></a><p>タイトル 10<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
     </div>
     <div class="swiper-pagination swiper-pagination4"></div>
   </div>
 
   <div class="swiper-container swiper5">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
+        <div class="swiper-slide"><img src="/images/exposure/c06.png" /><a class="trim-image-to-circle"></a><p>ラーメン次郎に行って、ラーメンの匂い<br />だけ楽しんで帰ってくる！</p><span>40代  男性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>タイトル 2<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c04.png" /><a class="trim-image-to-circle"></a><p>タイトル 3<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c03.png" /><a class="trim-image-to-circle"></a><p>タイトル 4<br />コメント コメント コメント</p><span>○○代  ○性  うつ</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c02.png" /><a class="trim-image-to-circle"></a><p>タイトル 5<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c01.png" /><a class="trim-image-to-circle"></a><p>タイトル 6<br />コメント コメント コメント</p><span>○○代  ○性  うつ</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c03.png" /><a class="trim-image-to-circle"></a><p>タイトル 7<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c04.png" /><a class="trim-image-to-circle"></a><p>タイトル 8<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>タイトル 9<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c06.png" /><a class="trim-image-to-circle"></a><p>タイトル 10<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
     </div>
     <div class="swiper-pagination swiper-pagination5"></div>
   </div>
 
   <div class="swiper-container swiper6">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>書斎で勝海舟の氷川清話を読む。<br />エスプレッソを飲みながら。</p><span>Dr. Masaya Ito</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>タイトル 2<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c04.png" /><a class="trim-image-to-circle"></a><p>タイトル 3<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c03.png" /><a class="trim-image-to-circle"></a><p>タイトル 4<br />コメント コメント コメント</p><span>○○代  ○性  うつ</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c02.png" /><a class="trim-image-to-circle"></a><p>タイトル 5<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c01.png" /><a class="trim-image-to-circle"></a><p>タイトル 6<br />コメント コメント コメント</p><span>○○代  ○性  うつ</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c03.png" /><a class="trim-image-to-circle"></a><p>タイトル 7<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c04.png" /><a class="trim-image-to-circle"></a><p>タイトル 8<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>タイトル 9<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c06.png" /><a class="trim-image-to-circle"></a><p>タイトル 10<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
     </div>
     <div class="swiper-pagination swiper-pagination6"></div>
   </div>
 
   <div class="swiper-container swiper7">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
+        <div class="swiper-slide"><img src="/images/exposure/c06.png" /><a class="trim-image-to-circle"></a><p>まま友も誘って肉女子会！<br />肉〜！肉〜！</p><span>30代  女性  うつ（嘘）</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>タイトル 2<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c04.png" /><a class="trim-image-to-circle"></a><p>タイトル 3<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c03.png" /><a class="trim-image-to-circle"></a><p>タイトル 4<br />コメント コメント コメント</p><span>○○代  ○性  うつ</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c02.png" /><a class="trim-image-to-circle"></a><p>タイトル 5<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c01.png" /><a class="trim-image-to-circle"></a><p>タイトル 6<br />コメント コメント コメント</p><span>○○代  ○性  うつ</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c03.png" /><a class="trim-image-to-circle"></a><p>タイトル 7<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c04.png" /><a class="trim-image-to-circle"></a><p>タイトル 8<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c05.png" /><a class="trim-image-to-circle"></a><p>タイトル 9<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
+        <div class="swiper-slide"><img src="/images/exposure/c06.png" /><a class="trim-image-to-circle"></a><p>タイトル 10<br />コメント コメント コメント</p><span>○○代  ○性  不安</span><a>♡</a></div>
     </div>
     <div class="swiper-pagination swiper-pagination7"></div>
   </div>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+　<meta charset="utf-8">
+　<link rel="stylesheet" media="all" href="./swiper.css">
+　<script src="./swiper.js"></script>
+ 
+  <style>
+    .swiper-container{
+      width: 100%;
+      height: 300px;
+      background-color: #b1c7aa;
+    }
+  </style>
+</head>
+<body>
+  <div class="swiper-container">
+    <!-- スライトさせるコンテンツ -->
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">コンテンツ1<br>ここにテキストや画像など好きにコーディングしてください。</div>
+      <div class="swiper-slide">コンテンツ2<br>ここにテキストや画像など好きにコーディングしてください。</div>
+      <div class="swiper-slide">コンテンツ3<br>ここにテキストや画像など好きにコーディングしてください。</div>
+    </div>
+ 
+    <!-- ページネーション -->
+    <div class="swiper-pagination"></div>
+ 
+    <!-- Next、Prev用のボタン -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+ 
+  <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+    });
+  </script>
+</body>
+</html>
+
+

@@ -51,18 +51,88 @@
   </tbody>
 </table>
 
+<!-- 
+<style>
+  .swiper-container{
+    width: 100%;
+    height: 300px;
+    background-color: #b1c7aa;
+  }
+</style>
+</head>
+<body>
+<div class="swiper-container">
+  <!-- スライトさせるコンテンツ -->
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">コンテンツ1<br>ここにテキストや画像など好きにコーディングしてください。</div>
+    <div class="swiper-slide">コンテンツ2<br>ここにテキストや画像など好きにコーディングしてください。</div>
+    <div class="swiper-slide">コンテンツ3<br>ここにテキストや画像など好きにコーディングしてください。</div>
+  </div>
+
+  <!-- ページネーション -->
+  <div class="swiper-pagination"></div>
+
+  <!-- Next、Prev用のボタン -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<script>
+  var mySwiper = new Swiper ('.swiper-container', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  });
+</script>
+
+
+<!-- Slider全体のコンテナ -->
+<div class="swiper-container">
+  <!-- Sliderの内包コンテナ -->
+  <div class="swiper-wrapper">
+      <!-- Slideさせたいコンテンツ -->
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+  </div>
+  <!-- ページネーション（※省略可） -->
+  <div class="swiper-pagination"></div>
+  <!-- ナビゲーションボタン（※省略可） --> 
+  <div class="swiper-button-prev"></div> 
+  <div class="swiper-button-next"></div>
+  <!-- スクロールバー（※省略可） --> 
+  <div class="swiper-scrollbar"></div> 
+</div>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="https://haniwaman.com/wp-content/uploads/2018/05/swiper01.png" alt="Swiper01"></div>
+    <div class="swiper-slide"><img src="https://haniwaman.com/wp-content/uploads/2018/05/swiper02.png" alt="Swiper02"></div>
+    <div class="swiper-slide"><img src="https://haniwaman.com/wp-content/uploads/2018/05/swiper03.png" alt="Swiper03"></div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+ -->
+
 
   <!-- Demo styles -->
   <style>
-    /* body {
+    body {
       background: #eee;
       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
       font-size: 14px;
       color:#000;
       margin: 0;
       padding: 0;
-    } */
-    /* .swiper-container {
+    }
+    .swiper-container {
       width: 100%;
       height: 300px;
       margin: 20px 0;
@@ -70,10 +140,10 @@
     .swiper-slide {
       text-align: center;
       font-size: 18px;
-      background: rgb(115, 255, 0); */
+      background: #fff;
 
       /* Center slide text vertically */
-      /* display: -webkit-box;
+      display: -webkit-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
@@ -85,7 +155,7 @@
       -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
-    } */
+    }
   </style>
 </head>
 <body>
@@ -143,13 +213,15 @@
     <div class="swiper-pagination swiper-pagination3"></div>
   </div>
 
+  <!-- Swiper JS -->
+  <script src="../package/js/swiper.min.js"></script>
+
   <!-- Initialize Swiper -->
   <script>
     var swiper1 = new Swiper('.swiper1', {
       spaceBetween: 30,
       pagination: {
         el: '.swiper-pagination1',
-        type: 'progressbar',
         clickable: true,
       },
     });
@@ -157,7 +229,6 @@
       spaceBetween: 30,
       pagination: {
         el: '.swiper-pagination2',
-        type: 'progressbar',
         clickable: true,
       },
     });
@@ -165,7 +236,6 @@
       spaceBetween: 30,
       pagination: {
         el: '.swiper-pagination3',
-        type: 'progressbar',
         clickable: true,
       },
     });

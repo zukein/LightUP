@@ -98,3 +98,20 @@ let addJoinButtonListener = () => {
     });
   });
 };
+
+// swiper.js
+var swiper = new Swiper('.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  loop: true,
+  autoHeight: false,
+  on: {
+    slideChange: function () {
+      jQuery('.swiper-slide-content').css('opacity', '0');
+      realIndex = this.realIndex + 1;
+      jQuery('.swiper-slide-content-' + realIndex).css('opacity', '1');
+    },
+  },
+});
